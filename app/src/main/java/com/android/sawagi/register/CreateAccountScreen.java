@@ -19,13 +19,13 @@ import com.android.sawagi.login.LoginScreen;
 
 public class CreateAccountScreen extends AppCompatActivity implements View.OnClickListener {
 
+    boolean isShow = false;
     private Toolbar toolbar;
     private TextView mTitle, txtShow, txtAddPicture, btnNext;
     private EditText editPhoneNo, editPassword, editFullName;
     private LinearLayout layoutShow;
     private TextInputLayout inputLayoutPhone, inputLayoutPassword, inputLayoutFullName;
     private ImageView profileImage;
-    boolean isShow = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

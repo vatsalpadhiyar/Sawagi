@@ -19,8 +19,8 @@ import com.android.sawagi.trip.TripDetailScreen;
 
 public class TripAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     LayoutInflater mInflater;
+    private Activity mActivity;
 
     public TripAdapter(Activity activity) {
 

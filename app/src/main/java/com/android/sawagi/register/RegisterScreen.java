@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -12,10 +13,15 @@ import android.widget.TextView;
 
 import com.android.sawagi.R;
 import com.android.sawagi.SplashScreen;
+import com.android.sawagi.Utils;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mobily.api.sms.utility.MobilyAPI;
+import com.mobily.api.sms.utility.OnDataReceiveListner;
 
 public class RegisterScreen extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String MOBILY_USERNAME = "962798310891";
+    private static final String MOBILY_PASSWORD = "bas1982l";
     private Toolbar toolbar;
     private TextView mTitle, txtCode, btnNext;
     private EditText editPhoneNo;
@@ -81,6 +87,7 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.register_btnNext:
                 //Open Activation Screen
+                sendSMS();
                 startActivity(new Intent(RegisterScreen.this, ActivationScreen.class));
                 break;
             case R.id.register_layout_Code:
@@ -88,5 +95,29 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
             default:
                 break;
         }
+    }
+
+    private void sendSMS() {
+        MobilyAPI  mobilyAPI = new MobilyAPI(getApplicationContext(), MOBILY_USERNAME, MOBILY_PASSWORD);
+        mobilyAPI.sendMessage("TEST",
+                "THIS IS TEST MSG",
+                editPhoneNo.toString(),
+                "2/2/2017",
+                "15:50:00",
+                "DELETEKEY",
+                "ALIAS",
+                new OnDataReceiveListner() {
+                    @Override
+                    public void onSuccess(Object object) {
+                        Utils.log("success");
+                        Utils.log(object);
+                    }
+
+                    @Override
+                    public void onFailure(Object object) {
+
+                    }
+                }
+        );
     }
 }

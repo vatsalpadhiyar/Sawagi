@@ -24,8 +24,8 @@ import com.android.sawagi.member.AddMemberScreen;
 
 public class MemberAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     LayoutInflater mInflater;
+    private Activity mActivity;
     private PopupWindow mDropdown = null;
     private int curPosition = 0;
 
@@ -100,13 +100,6 @@ public class MemberAdapter extends BaseAdapter {
         });
 
         return convertView;
-    }
-
-    static class ViewHolder {
-
-        ImageView profileImage, imageMore;
-        TextView txtName, txtPosition;
-        LinearLayout btnMore;
     }
 
     public void showPopup(ImageView button) {
@@ -185,6 +178,13 @@ public class MemberAdapter extends BaseAdapter {
             e.printStackTrace();
         }
 
+    }
+
+    static class ViewHolder {
+
+        ImageView profileImage, imageMore;
+        TextView txtName, txtPosition;
+        LinearLayout btnMore;
     }
 
 }

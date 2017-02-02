@@ -17,8 +17,8 @@ import com.android.sawagi.SplashScreen;
 
 public class SearchAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     LayoutInflater mInflater;
+    private Activity mActivity;
 
     public SearchAdapter(Activity activity) {
 

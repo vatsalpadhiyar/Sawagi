@@ -65,9 +65,9 @@
             android:id="@+id/activation_txtPhoneNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:text="+971 4 159 9898"
             android:textColor="@color/colorTitle"
             android:textSize="@dimen/titleField" />

@@ -12,12 +12,32 @@ import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
 
+    View drawerView;
     private LinearLayout btnMenu, btnHome, btnTrip, btnMember, btnAddress, btnSetting;
     private TextView txtLocation, txtDestination, txtProfileName, txtProfileCat,
             txtHome, txtTrip, txtMember, txtAddress, txtSetting, txtTell, txtSubscription;
     private ImageView profileImage, btnFb, btnTwitter, btnMail;
     private DrawerLayout mDrawerLayout;
-    View drawerView;
+    private DrawerLayout.DrawerListener mDrawerListener = new DrawerLayout.DrawerListener() {
+
+        @Override
+        public void onDrawerStateChanged(int status) {
+
+        }
+
+        @Override
+        public void onDrawerSlide(View view, float slideArg) {
+
+        }
+
+        @Override
+        public void onDrawerOpened(View view) {
+        }
+
+        @Override
+        public void onDrawerClosed(View view) {
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,27 +105,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         btnMail.setOnClickListener(this);
 
     }
-
-    private DrawerLayout.DrawerListener mDrawerListener = new DrawerLayout.DrawerListener() {
-
-        @Override
-        public void onDrawerStateChanged(int status) {
-
-        }
-
-        @Override
-        public void onDrawerSlide(View view, float slideArg) {
-
-        }
-
-        @Override
-        public void onDrawerOpened(View view) {
-        }
-
-        @Override
-        public void onDrawerClosed(View view) {
-        }
-    };
 
     @Override
     public void onClick(View v) {

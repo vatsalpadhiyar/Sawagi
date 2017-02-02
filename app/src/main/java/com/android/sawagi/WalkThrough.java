@@ -101,53 +101,6 @@ public class WalkThrough extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    public class ViewPagerAdapter extends PagerAdapter {
-
-        Activity activity;
-        int imageArray[];
-
-        public ViewPagerAdapter(Activity act, int[] imgArra) {
-            imageArray = imgArra;
-            activity = act;
-        }
-
-        public int getCount() {
-            return imageArray.length;
-        }
-
-        public Object instantiateItem(View collection, int position) {
-
-            LayoutInflater inflater = (LayoutInflater) activity
-                    .getSystemService(activity.getApplicationContext().LAYOUT_INFLATER_SERVICE);
-
-            View view = inflater.inflate(R.layout.page_list_item, null);
-
-            LinearLayout pagelayout = (LinearLayout) view
-                    .findViewById(R.id.pagerlayout);
-
-            pagelayout.setBackgroundResource(imageArray[position]);
-
-            ((ViewPager) collection).addView(view, 0);
-
-            return view;
-        }
-
-        @Override
-        public void destroyItem(View arg0, int arg1, Object arg2) {
-            ((ViewPager) arg0).removeView((View) arg2);
-        }
-
-        @Override
-        public boolean isViewFromObject(View arg0, Object arg1) {
-            return arg0 == ((View) arg1);
-        }
-
-        @Override
-        public Parcelable saveState() {
-            return null;
-        }
-    }
-
     public void changDot(int position) {
 
         switch (position) {
@@ -209,6 +162,53 @@ public class WalkThrough extends AppCompatActivity implements View.OnClickListen
 
             default:
                 break;
+        }
+    }
+
+    public class ViewPagerAdapter extends PagerAdapter {
+
+        Activity activity;
+        int imageArray[];
+
+        public ViewPagerAdapter(Activity act, int[] imgArra) {
+            imageArray = imgArra;
+            activity = act;
+        }
+
+        public int getCount() {
+            return imageArray.length;
+        }
+
+        public Object instantiateItem(View collection, int position) {
+
+            LayoutInflater inflater = (LayoutInflater) activity
+                    .getSystemService(activity.getApplicationContext().LAYOUT_INFLATER_SERVICE);
+
+            View view = inflater.inflate(R.layout.page_list_item, null);
+
+            LinearLayout pagelayout = (LinearLayout) view
+                    .findViewById(R.id.pagerlayout);
+
+            pagelayout.setBackgroundResource(imageArray[position]);
+
+            ((ViewPager) collection).addView(view, 0);
+
+            return view;
+        }
+
+        @Override
+        public void destroyItem(View arg0, int arg1, Object arg2) {
+            ((ViewPager) arg0).removeView((View) arg2);
+        }
+
+        @Override
+        public boolean isViewFromObject(View arg0, Object arg1) {
+            return arg0 == ((View) arg1);
+        }
+
+        @Override
+        public Parcelable saveState() {
+            return null;
         }
     }
 }

@@ -26,8 +26,8 @@
         android:layout_height="fill_parent"
         android:layout_weight="8.5"
         android:gravity="center_vertical|left"
-        android:paddingRight="6pt"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingRight="6pt">
 
         <TextView
             android:id="@+id/recent_list_txtName"
@@ -50,7 +50,7 @@
             android:layout_width="fill_parent"
             android:layout_height="0.3dp"
             android:layout_marginTop="2.5pt"
-            android:scaleType="fitXY"
-            android:background="@color/colorGray" />
+            android:background="@color/colorGray"
+            android:scaleType="fitXY" />
     </LinearLayout>
 </LinearLayout>

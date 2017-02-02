@@ -28,13 +28,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginScreen extends AppCompatActivity implements View.OnClickListener {
 
+    boolean isShow = false;
     private Toolbar toolbar;
     private TextView mTitle, txtShow, txtForgotPwd, btnLogin, btnCreateAccount, btnLoginDriver;
     private EditText editPhoneNo, editPassword;
     private LinearLayout layoutShow;
     private TextInputLayout inputLayoutPhone, inputLayoutpassword;
-    boolean isShow = false;
-
     private FirebaseAuth auth;
 
     @Override
@@ -151,11 +150,11 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     }
 
     private void checkLogin() {
-        String email = editPhoneNo.getText().toString();
+        String phoneNumber = editPhoneNo.getText().toString();
         final String password = editPassword.getText().toString();
 
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(phoneNumber)) {
+            Toast.makeText(getApplicationContext(), "Enter phone number!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -165,10 +164,10 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         }
 
         //authenticate user
-        auth.signInWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(phoneNumber, password)
                 .addOnCompleteListener(LoginScreen.this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task){
+                    public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
                             // there was an error
                             if (password.length() < 6) {

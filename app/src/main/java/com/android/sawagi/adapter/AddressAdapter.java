@@ -20,8 +20,8 @@ import com.android.sawagi.trip.TripDetailScreen;
 
 public class AddressAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     LayoutInflater mInflater;
+    private Activity mActivity;
 
     public AddressAdapter(Activity activity) {
 

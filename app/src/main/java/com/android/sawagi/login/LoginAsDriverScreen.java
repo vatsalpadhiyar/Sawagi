@@ -18,12 +18,12 @@ import com.android.sawagi.SplashScreen;
 
 public class LoginAsDriverScreen extends AppCompatActivity implements View.OnClickListener {
 
+    boolean isShow = false;
     private Toolbar toolbar;
     private TextView mTitle, txtShow, txtForgotPwd, btnLogin;
     private EditText editPhoneNo, editPassword;
     private LinearLayout layoutShow;
     private TextInputLayout inputLayoutPhone, inputLayoutpassword;
-    boolean isShow = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

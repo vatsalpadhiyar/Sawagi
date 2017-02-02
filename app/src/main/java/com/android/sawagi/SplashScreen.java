@@ -6,12 +6,13 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.android.sawagi.login.LoginScreen;
+
 public class SplashScreen extends AppCompatActivity {
 
+    public static Typeface Roboto_Regular, Roboto_Bold;
     // Loading screen timer
     private static int SPLASH_TIME_OUT = 3000;
-
-    public static Typeface Roboto_Regular,Roboto_Bold;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,12 @@ public class SplashScreen extends AppCompatActivity {
 
                 // Open your app   Walktrough activity and Finish current Activity
 
-                
+                if (Utils.isFirstOpen(getApplicationContext())) {
+                    startActivity(new Intent(SplashScreen.this, WalkThrough.class));
+                } else {
+                    startActivity(new Intent(SplashScreen.this, LoginScreen.class));
+                }
 
-                startActivity(new Intent(SplashScreen.this, WalkThrough.class));
                 finish();
 
             }

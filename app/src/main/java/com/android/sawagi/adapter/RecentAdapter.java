@@ -17,8 +17,8 @@ import com.android.sawagi.SplashScreen;
 
 public class RecentAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     LayoutInflater mInflater;
+    private Activity mActivity;
 
     public RecentAdapter(Activity activity) {
 

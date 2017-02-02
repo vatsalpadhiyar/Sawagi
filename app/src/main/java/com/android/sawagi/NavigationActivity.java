@@ -18,6 +18,7 @@ import com.android.sawagi.trip.TripHistory;
 
 public class NavigationActivity extends AppCompatActivity implements View.OnClickListener {
 
+    View drawerView;
     private Toolbar toolbar;
     private TextView mTitle, txtProfileName, txtProfileCat,
             txtHome, txtTrip, txtMember, txtAddress, txtSetting, txtTell, txtSubscription;
@@ -25,7 +26,26 @@ public class NavigationActivity extends AppCompatActivity implements View.OnClic
     private String strType;
     private ImageView profileImage, btnFb, btnTwitter, btnMail;
     private DrawerLayout mDrawerLayout;
-    View drawerView;
+    private DrawerLayout.DrawerListener mDrawerListener = new DrawerLayout.DrawerListener() {
+
+        @Override
+        public void onDrawerStateChanged(int status) {
+
+        }
+
+        @Override
+        public void onDrawerSlide(View view, float slideArg) {
+
+        }
+
+        @Override
+        public void onDrawerOpened(View view) {
+        }
+
+        @Override
+        public void onDrawerClosed(View view) {
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,27 +145,6 @@ public class NavigationActivity extends AppCompatActivity implements View.OnClic
 
 
     }
-
-    private DrawerLayout.DrawerListener mDrawerListener = new DrawerLayout.DrawerListener() {
-
-        @Override
-        public void onDrawerStateChanged(int status) {
-
-        }
-
-        @Override
-        public void onDrawerSlide(View view, float slideArg) {
-
-        }
-
-        @Override
-        public void onDrawerOpened(View view) {
-        }
-
-        @Override
-        public void onDrawerClosed(View view) {
-        }
-    };
 
     public void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
