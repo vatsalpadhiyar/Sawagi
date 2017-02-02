@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF">
+
+
+    <item
+        android:id="@+id/admin"
+        android:title="Set Admin" />
+
+    <item
+        android:id="@+id/edit"
+        android:title="Edit" />
+
+    <item
+        android:id="@+id/remove"
+        android:title="Remove" />
+
+</menu>

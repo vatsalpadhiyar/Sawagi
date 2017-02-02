@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupmenu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_shadow"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_layoutAdmin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="4pt"
+        android:paddingLeft="7pt"
+        android:paddingRight="20pt"
+        android:paddingTop="4pt">
+
+        <TextView
+            android:id="@+id/popup_txtAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Admin"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sideNameSize" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EEF2F3"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/popup_layoutEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="4pt"
+        android:paddingLeft="7pt"
+        android:paddingRight="20pt"
+        android:paddingTop="4pt">
+
+        <TextView
+            android:id="@+id/popup_txtEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sideNameSize" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EEF2F3"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/popup_layoutRemove"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="4pt"
+        android:paddingLeft="7pt"
+        android:paddingRight="20pt"
+        android:paddingTop="4pt">
+
+        <TextView
+            android:id="@+id/popup_txtRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sideNameSize" />
+    </LinearLayout>
+</LinearLayout>

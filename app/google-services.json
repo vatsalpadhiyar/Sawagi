@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "746902173438",
+    "firebase_url": "https://swagiowner.firebaseio.com",
+    "project_id": "swagiowner",
+    "storage_bucket": "swagiowner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746902173438:android:591fbc45c579afb6",
+        "android_client_info": {
+          "package_name": "com.android.sawagi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746902173438-vhu1ua5hedbgfa7qfbmche9jtun66bs4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.sawagi",
+            "certificate_hash": "1853F46F56F8EB8DA5BF822C4FA49D0076103DAE"
+          }
+        },
+        {
+          "client_id": "746902173438-eacge1su5bnm14drs0cqh8d0ue1qit7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB52LARYOk3H3xgK5v_ndy2kN-Wh6jYtVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746902173438-eacge1su5bnm14drs0cqh8d0ue1qit7r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "746902173438-efucm6q5kh6nl3dmtknlr0mqjs36b508.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sawagy.iosapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

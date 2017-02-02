@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_walk_through"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.sawagi.WalkThrough">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/walk_txtIntro1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register a driver and add a family"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/titleField" />
+
+            <TextView
+                android:id="@+id/walk_txtIntro2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="member into the app"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/titleField" />
+
+            <TextView
+                android:id="@+id/walk_txtIntro3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="member into the app"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/titleField" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/imgview1_fill"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#3BBEA3" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/imgview2_fill"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#3BBEA3"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/imgview3_fill"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#3BBEA3"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/imgview4_fill"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#3BBEA3"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/imgview5_fill"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#3BBEA3"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/walk_layoutContinue"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/walk_txtContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTINUE"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/titleField" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

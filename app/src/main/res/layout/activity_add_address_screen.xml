@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_address_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F8F8"
+    android:orientation="vertical"
+    tools:context="com.android.sawagi.addressbook.AddAddressScreen">
+
+    <include
+        layout="@layout/address_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F9F8F8"
+        android:orientation="vertical"
+        android:padding="5pt">
+
+        <TextView
+            android:id="@+id/addAddress_txtRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Address"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/addressSize" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2pt"
+            android:background="@drawable/white_corner_shadow"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/addAddress_recentList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

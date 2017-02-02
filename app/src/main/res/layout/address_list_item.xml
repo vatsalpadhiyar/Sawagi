@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:paddingBottom="5.5pt"
+    android:paddingTop="5.5pt">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/address_pin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/address_list_txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jasper House"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/nameSize" />
+
+        <TextView
+            android:id="@+id/address_list_txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="412 Eastern St. AD"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/addressSize" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/address_list_btnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6pt">
+
+            <ImageView
+                android:id="@+id/address_list_imageMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

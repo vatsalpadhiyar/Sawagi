@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.sawagi.member.ManageMember">
+
+    <ListView
+        android:id="@+id/member_ListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#EEF2F3"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/member_btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10pt"
+        android:layout_marginRight="10pt"
+        android:src="@drawable/add" />
+</FrameLayout>

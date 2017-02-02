@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="titleField">18dp</dimen>
+    <dimen name="inputField">20dp</dimen>
+    <dimen name="buttonSize">18dp</dimen>
+    <dimen name="dropDownSize">60dp</dimen>
+    <dimen name="textSize">16dp</dimen>
+    <dimen name="profileSize">140dp</dimen>
+    <dimen name="drawerWidth">1240px</dimen>
+    <dimen name="circleWidth">12dp</dimen>
+    <dimen name="lineHeight">22dp</dimen>
+    <dimen name="sideNameSize">20dp</dimen>
+    <dimen name="sideCategorySize">18dp</dimen>
+    <dimen name="imageSize">256px</dimen>
+    <dimen name="profileImageSize">192px</dimen>
+    <dimen name="nameSize">19dp</dimen>
+    <dimen name="addressSize">17dp</dimen>
+</resources>

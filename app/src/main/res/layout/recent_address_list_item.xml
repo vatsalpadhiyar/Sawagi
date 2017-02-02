@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:paddingBottom="2.5pt"
+    android:paddingTop="5.5pt">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recent_list_iconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="8.5"
+        android:gravity="center_vertical|left"
+        android:paddingRight="6pt"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recent_list_txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dubai Mall"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/nameSize" />
+
+        <TextView
+            android:id="@+id/recent_list_txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.3dp"
+            android:text="412 Eastern St. AD"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/addressSize" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="2.5pt"
+            android:scaleType="fitXY"
+            android:background="@color/colorGray" />
+    </LinearLayout>
+</LinearLayout>
