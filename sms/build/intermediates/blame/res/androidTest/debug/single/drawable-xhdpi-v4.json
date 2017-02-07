@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Work\\Sawagi\\sms\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "F:\\Work\\Sawagi\\sms\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Mobily.workspace.studio\\MobilyAPI\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\Mobily.workspace.studio\\MobilyAPI\\app\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Vatsal\\Downloads\\mobilly-en\\code\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Vatsal\\Downloads\\mobilly-en\\code\\app\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    }
+]

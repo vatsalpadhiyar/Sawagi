@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MobilyAPI</string>
+    <string name="connection_msg">No Internet...</string>
+    <string name="service_not_available_ar">الخدمة غير متوفرة</string>
+    <string name="service_not_available_en">Service not available...</string>
+</resources>
