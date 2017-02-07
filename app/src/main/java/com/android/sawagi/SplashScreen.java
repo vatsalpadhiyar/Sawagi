@@ -36,7 +36,7 @@ public class SplashScreen extends AppCompatActivity {
 
                 // Open your app   Walktrough activity and Finish current Activity
 
-                if (Utils.isFirstOpen(getApplicationContext())) {
+                if (sUtils.isFirstOpen(getApplicationContext())) {
                     startActivity(new Intent(SplashScreen.this, WalkThrough.class));
                 } else {
                     startActivity(new Intent(SplashScreen.this, LoginScreen.class));

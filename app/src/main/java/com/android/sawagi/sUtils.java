@@ -8,7 +8,7 @@ import android.util.Log;
  * Created by Vatsal on 2/2/2017.
  */
 
-public class Utils {
+public class sUtils {
 
     //Common Constants
     static final private String IS_APP_OPENED = "isAppOpened";
