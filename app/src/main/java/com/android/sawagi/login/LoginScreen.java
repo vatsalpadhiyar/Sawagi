@@ -164,7 +164,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         }
 
         //authenticate user
-        auth.signInWithEmailAndPassword(phoneNumber, password)
+        auth.signInWithEmailAndPassword("+" + phoneNumber + "@sawagi.net", password)
                 .addOnCompleteListener(LoginScreen.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

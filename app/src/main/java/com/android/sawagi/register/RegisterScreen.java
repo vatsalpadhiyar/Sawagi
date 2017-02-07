@@ -14,12 +14,12 @@ import com.android.sawagi.R;
 import com.android.sawagi.SplashScreen;
 import com.android.sawagi.sUtils;
 import com.google.firebase.auth.FirebaseAuth;
-import com.mobily.api.sms.entity.BalanceResponse;
-import com.mobily.api.sms.entity.BalanceResponseData;
 import com.mobily.api.sms.entity.CommonResponseData;
 import com.mobily.api.sms.utility.MobilyAPI;
 import com.mobily.api.sms.utility.OnDataReceiveListner;
 import com.mobily.api.sms.entity.Error;
+
+import java.util.Random;
 
 public class RegisterScreen extends AppCompatActivity implements View.OnClickListener {
 
@@ -102,11 +102,18 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
 
     private void sendSMS() {
 
+        Random ran = new Random();
+        String otp = "" + (100000 + ran.nextInt(900000));
+
+        sUtils.log("otp :: " + otp );
+
+        sUtils.saveOtp(getApplicationContext(), otp);
+
         MobilyAPI  mobilyAPI = new MobilyAPI(getApplicationContext(), MOBILY_USERNAME, MOBILY_PASSWORD);
 
         mobilyAPI.sendMessage("BARY",
-                "THIS IS TEST MSG",
-                editPhoneNo.toString().trim(),
+                "Welcome! Your OTP is " + otp,
+                editPhoneNo.getText().toString().trim(),
                 "",
                 "",
                 "DELETEKEY",
@@ -115,8 +122,10 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onSuccess(Object object) {
                         sUtils.log("success");
+
                         CommonResponseData data = (CommonResponseData) object;
                         sUtils.log(data.getMessageEn());
+                        sUtils.saveMobileNumber(getApplicationContext(), editPhoneNo.getText().toString().trim());
                         startActivity(new Intent(RegisterScreen.this, ActivationScreen.class));
                     }
 
@@ -124,6 +133,10 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
                     public void onFailure(Object object) {
                         Error  e = (Error) object;
                         sUtils.log(e.getMessageEn());
+
+                        // TODO: remove this line
+                        sUtils.saveMobileNumber(getApplicationContext(), editPhoneNo.getText().toString().trim());
+                        startActivity(new Intent(RegisterScreen.this, ActivationScreen.class));
                     }
                 }
         );

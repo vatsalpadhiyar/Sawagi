@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.android.sawagi.R;
 import com.android.sawagi.SplashScreen;
+import com.android.sawagi.sUtils;
 
 public class ActivationScreen extends AppCompatActivity implements View.OnClickListener {
 
@@ -82,7 +83,16 @@ public class ActivationScreen extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.activation_btnNext:
                 //Open Create An Account screen
-                startActivity(new Intent(ActivationScreen.this, CreateAccountScreen.class));
+                if ( editCode.getText().toString().equals("")) {
+                    sUtils.showToast(getApplicationContext(), "Please enter code first");
+                    return;
+                }
+                if ( sUtils.matchOtp(getApplicationContext(), editCode.getText().toString().trim())){
+                    startActivity(new Intent(ActivationScreen.this, CreateAccountScreen.class));
+                }else {
+                    sUtils.showToast(getApplicationContext(), "Please enter proper code");
+                }
+
                 break;
             case R.id.activation_txtResent:
                 break;
